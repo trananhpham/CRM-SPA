@@ -3,10 +3,18 @@ import React from 'react';
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Full Width Background Image */}
+      {/* Full Width Background Video */}
       <div className="absolute inset-0 z-0">
-        <img src="/hero_spa.png" alt="Luxury Spa Aesthetic" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-dark/60 mix-blend-multiply"></div>
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="w-full h-full object-cover scale-105"
+        >
+          <source src="/intro.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-dark/50 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent"></div>
       </div>
 
