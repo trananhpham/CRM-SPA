@@ -1,0 +1,17 @@
+{
+  "sqltools.connections": [
+    {
+      "name": "Spa CRM MIS MySQL",
+      "driver": "MySQL",
+      "server": "127.0.0.1",
+      "port": 3306,
+      "database": "spa_crm_mis",
+      "username": "root",
+      "password": "",
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50
+    }
+  ]
+}

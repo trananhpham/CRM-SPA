@@ -1,0 +1,17 @@
+TYPE=VIEW
+query=select hour(`spa_crm_mis`.`appointments`.`appointment_start`) AS `hour_number`,concat(lpad(hour(`spa_crm_mis`.`appointments`.`appointment_start`),2,\'0\'),\':00\') AS `hour_label`,count(0) AS `total_appointments` from `spa_crm_mis`.`appointments` where `spa_crm_mis`.`appointments`.`status` in (\'BOOKED\',\'CONFIRMED\',\'COMPLETED\') group by hour(`spa_crm_mis`.`appointments`.`appointment_start`) order by hour(`spa_crm_mis`.`appointments`.`appointment_start`)
+md5=3c6fd30876c122eeedc3458a74d2a3b1
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=localhost
+suid=2
+with_check_option=0
+timestamp=0001782244009069651
+create-version=2
+source=SELECT\n    HOUR(appointment_start) AS hour_number,\n    CONCAT(LPAD(HOUR(appointment_start), 2, \'0\'), \':00\') AS hour_label,\n    COUNT(*) AS total_appointments\nFROM appointments\nWHERE status IN (\'BOOKED\', \'CONFIRMED\', \'COMPLETED\')\nGROUP BY HOUR(appointment_start)\nORDER BY hour_number
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_uca1400_ai_ci
+view_body_utf8=select hour(`spa_crm_mis`.`appointments`.`appointment_start`) AS `hour_number`,concat(lpad(hour(`spa_crm_mis`.`appointments`.`appointment_start`),2,\'0\'),\':00\') AS `hour_label`,count(0) AS `total_appointments` from `spa_crm_mis`.`appointments` where `spa_crm_mis`.`appointments`.`status` in (\'BOOKED\',\'CONFIRMED\',\'COMPLETED\') group by hour(`spa_crm_mis`.`appointments`.`appointment_start`) order by hour(`spa_crm_mis`.`appointments`.`appointment_start`)
+sql_path=CURRENT_SCHEMA
+mariadb-version=120302

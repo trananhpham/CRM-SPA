@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Only apply tailwind base styles inside .tailwind-scope or specific elements if needed, but Vite handles global CSS.
+   We will keep it global but use utility classes. */
