@@ -2,45 +2,45 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-ivory">
-      <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center">
-        <div className="w-full lg:w-1/2 z-10">
-          <h1 className="text-5xl lg:text-7xl font-serif font-bold text-dark leading-tight mb-6">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Full Width Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img src="/hero_spa.png" alt="Luxury Spa Aesthetic" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-dark/60 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center mt-20">
+        <div className="max-w-3xl">
+          <h1 className="text-5xl lg:text-7xl font-serif font-bold text-white leading-tight mb-6 drop-shadow-lg">
             Luxury Spa <br/> & Beauty Care
           </h1>
-          <p className="text-lg text-grayText mb-10 max-w-lg leading-relaxed">
+          <p className="text-lg text-ivory mb-10 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
             Chăm sóc sắc đẹp chuyên nghiệp, đặt lịch dễ dàng, trải nghiệm dịch vụ cao cấp. Đánh thức vẻ đẹp tự nhiên của bạn trong không gian thư giãn tuyệt đối.
           </p>
-          <div className="flex flex-wrap gap-4 mb-12">
-            <a href="#booking" className="px-8 py-4 bg-gold-500 text-white rounded-full font-medium text-lg hover:bg-gold-600 transition shadow-lg shadow-gold-500/30">
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
+            <a href="#booking" className="px-8 py-4 bg-gold-500 text-white rounded-full font-medium text-lg hover:bg-gold-600 transition shadow-lg shadow-gold-500/50">
               Đặt lịch ngay
             </a>
-            <a href="#services" className="px-8 py-4 bg-white border-2 border-gold-500 text-gold-500 rounded-full font-medium text-lg hover:bg-gold-50 transition">
+            <a href="#services" className="px-8 py-4 bg-transparent border-2 border-gold-500 text-gold-500 rounded-full font-medium text-lg hover:bg-gold-500 hover:text-white transition backdrop-blur-sm">
               Xem dịch vụ
             </a>
           </div>
-          <div className="flex gap-8 border-t border-borderLight pt-8">
-            <div>
-              <p className="text-3xl font-serif font-bold text-dark">500+</p>
-              <p className="text-grayText text-sm mt-1">Khách hàng</p>
+          
+          <div className="flex justify-center gap-12 border-t border-gold-500/30 pt-8">
+            <div className="text-center">
+              <p className="text-4xl font-serif font-bold text-gold-500 drop-shadow-md">500+</p>
+              <p className="text-gray-300 text-sm mt-2 uppercase tracking-widest font-medium">Khách hàng</p>
             </div>
-            <div>
-              <p className="text-3xl font-serif font-bold text-dark">20+</p>
-              <p className="text-grayText text-sm mt-1">Dịch vụ</p>
+            <div className="text-center">
+              <p className="text-4xl font-serif font-bold text-gold-500 drop-shadow-md">20+</p>
+              <p className="text-gray-300 text-sm mt-2 uppercase tracking-widest font-medium">Dịch vụ</p>
             </div>
-            <div>
-              <p className="text-3xl font-serif font-bold text-dark">98%</p>
-              <p className="text-grayText text-sm mt-1">Hài lòng</p>
+            <div className="text-center">
+              <p className="text-4xl font-serif font-bold text-gold-500 drop-shadow-md">98%</p>
+              <p className="text-gray-300 text-sm mt-2 uppercase tracking-widest font-medium">Hài lòng</p>
             </div>
           </div>
-        </div>
-        <div className="w-full lg:w-1/2 mt-16 lg:mt-0 relative">
-          {/* Thay ảnh bằng khối màu nếu không có ảnh */}
-          <div className="w-full aspect-[4/5] bg-borderLight rounded-[2rem] overflow-hidden relative shadow-2xl group">
-            <div className="absolute inset-0 bg-gradient-to-tr from-gold-500/20 to-transparent mix-blend-overlay z-10 transition-opacity duration-500 group-hover:opacity-50"></div>
-            <img src="/hero_spa.png" alt="Luxury Spa Aesthetic" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
-          </div>
-          <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl -z-10"></div>
         </div>
       </div>
     </section>
