@@ -36,9 +36,9 @@ const Hero = () => {
         </div>
         <div className="w-full lg:w-1/2 mt-16 lg:mt-0 relative">
           {/* Thay ảnh bằng khối màu nếu không có ảnh */}
-          <div className="w-full aspect-[4/5] bg-borderLight rounded-[2rem] overflow-hidden relative shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-tr from-gold-500/20 to-transparent mix-blend-overlay"></div>
-            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2070&auto=format&fit=crop" alt="Spa Treatment" className="w-full h-full object-cover" />
+          <div className="w-full aspect-[4/5] bg-borderLight rounded-[2rem] overflow-hidden relative shadow-2xl group">
+            <div className="absolute inset-0 bg-gradient-to-tr from-gold-500/20 to-transparent mix-blend-overlay z-10 transition-opacity duration-500 group-hover:opacity-50"></div>
+            <img src="/hero_spa.png" alt="Luxury Spa Aesthetic" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
           </div>
           <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl -z-10"></div>
         </div>
