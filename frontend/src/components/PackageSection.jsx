@@ -18,10 +18,15 @@ const PackageSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
           {packages.map((pkg, index) => (
-            <div key={pkg.package_id} className={`relative bg-white border ${index === 0 ? 'border-gold-500 shadow-xl shadow-gold-500/10' : 'border-borderLight'} rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300`}>
+            <div key={pkg.package_id} className={`relative bg-white border ${index === 0 ? 'border-gold-500 shadow-xl shadow-gold-500/10' : 'border-borderLight'} rounded-2xl p-6 hover:-translate-y-2 transition-all duration-300 flex flex-col`}>
               {index === 0 && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gold-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gold-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider z-10">
                   Popular
+                </div>
+              )}
+              {pkg.image_url && (
+                <div className="w-full h-48 mb-6 overflow-hidden rounded-xl bg-gray-100">
+                  <img src={pkg.image_url} alt={pkg.package_name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
               )}
               <h3 className="text-2xl font-serif font-bold text-dark mb-2 text-center">{pkg.package_name}</h3>
@@ -48,7 +53,7 @@ const PackageSection = () => {
                   </li>
               </ul>
               
-              <a href="#booking" className={`block w-full text-center py-3 rounded-xl font-medium transition ${index === 0 ? 'bg-gold-500 text-white hover:bg-gold-600' : 'bg-ivory text-dark hover:bg-gold-50 hover:text-gold-500'}`}>
+              <a href="#booking" className={`block w-full text-center mt-auto py-3 rounded-xl font-medium transition ${index === 0 ? 'bg-gold-500 text-white hover:bg-gold-600' : 'bg-ivory text-dark hover:bg-gold-50 hover:text-gold-500'}`}>
                 Mua gói này
               </a>
             </div>

@@ -13,9 +13,11 @@ exports.getServices = async (req, res) => {
         console.error(error);
         // Fallback mock
         res.json([
-            { service_id: 1, service_name: 'Facial Cấp Ẩm Chuyên Sâu', category_name: 'Chăm sóc da mặt', price: 499000, duration_minutes: 60, description: 'Làm sạch sâu, cấp ẩm đa tầng giúp da căng bóng' },
-            { service_id: 2, service_name: 'Massage Thư Giãn Toàn Thân', category_name: 'Massage Body', price: 599000, duration_minutes: 90, description: 'Sử dụng tinh dầu thiên nhiên kết hợp kỹ thuật ấn huyệt' },
-            { service_id: 3, service_name: 'Laser Toning Trẻ Hóa', category_name: 'Trị liệu công nghệ cao', price: 1500000, duration_minutes: 45, description: 'Làm đều màu da, se khít lỗ chân lông bằng công nghệ Laser mới nhất' }
+            { service_id: 1, service_name: 'Facial Cấp Ẩm Chuyên Sâu', category_name: 'Chăm sóc da mặt', price: 499000, duration_minutes: 60, description: 'Làm sạch sâu, cấp ẩm đa tầng giúp da căng bóng', image_url: '/images/facial_spa.png' },
+            { service_id: 2, service_name: 'Massage Thư Giãn Toàn Thân', category_name: 'Massage Body', price: 599000, duration_minutes: 90, description: 'Sử dụng tinh dầu thiên nhiên kết hợp kỹ thuật ấn huyệt', image_url: '/images/massage_spa.png' },
+            { service_id: 3, service_name: 'Laser Toning Trẻ Hóa', category_name: 'Trị liệu công nghệ cao', price: 1500000, duration_minutes: 45, description: 'Làm đều màu da, se khít lỗ chân lông bằng công nghệ Laser mới nhất', image_url: '/images/laser_spa.png' },
+            { service_id: 4, service_name: 'Tẩy Tế Bào Chết Toàn Thân', category_name: 'Chăm sóc cơ thể', price: 350000, duration_minutes: 45, description: 'Loại bỏ tế bào chết, làm mịn màng và sáng da', image_url: '/images/body_scrub.png' },
+            { service_id: 5, service_name: 'Trị Mụn Chuyên Sâu', category_name: 'Điều trị da', price: 650000, duration_minutes: 75, description: 'Lấy nhân mụn chuẩn y khoa, chiếu ánh sáng sinh học', image_url: '/images/acne_treatment.png' }
         ]);
     }
 };
@@ -41,8 +43,9 @@ exports.getPackages = async (req, res) => {
     } catch (error) {
         console.error(error);
         res.json([
-            { package_id: 1, package_name: 'Combo Phục Hồi Thanh Xuân', package_price: 3900000, validity_days: 180, description: 'Bao gồm 5 buổi Laser và 5 buổi Facial', items: [{ service_name: 'Laser Toning', included_sessions: 5 }] },
-            { package_id: 2, package_name: 'Thẻ Đặc Quyền Relax', package_price: 2500000, validity_days: 90, description: 'Gói ưu đãi dành cho massage toàn thân', items: [{ service_name: 'Massage Body', included_sessions: 10 }] }
+            { package_id: 1, package_name: 'Combo Phục Hồi Thanh Xuân', package_price: 3900000, validity_days: 180, description: 'Bao gồm 5 buổi Laser và 5 buổi Facial', image_url: '/images/combo_youth.png', items: [{ service_name: 'Laser Toning', included_sessions: 5 }, { service_name: 'Facial Cấp Ẩm', included_sessions: 5 }] },
+            { package_id: 2, package_name: 'Thẻ Đặc Quyền Relax', package_price: 2500000, validity_days: 90, description: 'Gói ưu đãi dành cho massage toàn thân', image_url: '/images/vip_relax.png', items: [{ service_name: 'Massage Body', included_sessions: 10 }] },
+            { package_id: 3, package_name: 'Liệu Trình Trị Mụn Tận Gốc', package_price: 2800000, validity_days: 90, description: 'Giải quyết triệt để vấn đề mụn, mờ thâm', image_url: '/images/acne_course.png', items: [{ service_name: 'Trị Mụn Chuyên Sâu', included_sessions: 5 }] }
         ]);
     }
 };
