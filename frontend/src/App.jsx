@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Users, CalendarDays, LogOut } from 'lucide-react';
+import { LayoutDashboard, Users, CalendarDays, LogOut, Home } from 'lucide-react';
 import axios from 'axios';
 
 import Dashboard from './pages/Dashboard';
@@ -28,7 +28,10 @@ const Sidebar = ({ onLogout, userName }) => {
       <Link to="/admin/appointments" className={`nav-link ${location.pathname === '/admin/appointments' ? 'active' : ''}`}>
         <CalendarDays size={20} /> Appointments
       </Link>
-      <div style={{ marginTop: 'auto' }}>
+      <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+        <Link to="/" className="nav-link">
+          <Home size={20} /> Trang Chủ
+        </Link>
         <button onClick={onLogout} className="nav-link" style={{ width: '100%', background: 'transparent', border: 'none', cursor: 'pointer', textAlign: 'left', color: '#dc3545' }}>
           <LogOut size={20} /> Log Out
         </button>
