@@ -59,3 +59,6 @@ Version: '12.3.2-MariaDB'  socket: ''  port: 3306  MariaDB Server
 2026-06-24  3:16:37 15 [Warning] Aborted connection 15 to db: 'spa_crm_mis' user: 'root' host: 'localhost' (Got an error reading communication packets)
 2026-06-24  3:18:24 38 [Warning] Aborted connection 38 to db: 'spa_crm_mis' user: 'root' host: 'localhost' (Got an error reading communication packets)
 2026-06-24  3:18:24 39 [Warning] Aborted connection 39 to db: 'spa_crm_mis' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2026-06-24  3:38:03 40 [Warning] Aborted connection 40 to db: 'spa_crm_mis' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2026-06-24  3:38:03 42 [Warning] Aborted connection 42 to db: 'spa_crm_mis' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2026-06-24  3:38:03 41 [Warning] Aborted connection 41 to db: 'spa_crm_mis' user: 'root' host: 'localhost' (Got an error reading communication packets)
